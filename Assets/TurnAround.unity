@@ -918,7 +918,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1521668653}
   m_Layer: 6
-  m_Name: missileAttack
+  m_Name: meeleAttack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
