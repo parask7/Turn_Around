@@ -1,7 +1,7 @@
 
 using UnityEngine;
 
-public class Attack : MonoBehaviour
+public class EnemyAttack : MonoBehaviour
 {
     public int damage = 20;
     public float attackCooldown = 1.5f;
@@ -16,7 +16,7 @@ public class Attack : MonoBehaviour
 
         if(distanceToTarget <= attackRange)
         {
-            Health health = target.GetComponent<Health>();
+            PlayerHealth health = target.GetComponent<PlayerHealth>();
             if(health != null)
             {
                 health.TakeDamage(damage);

@@ -3,7 +3,7 @@ using UnityEngine;
 public class EnemyAI : MonoBehaviour
 {
     public Transform player;
-    public Attack attack;
+    public EnemyAttack attack;
 
     [Header("Patrol")]
     public Transform[] patrolPoints;

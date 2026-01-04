@@ -48,13 +48,15 @@
     <Analyzer Include="/home/paras-kukreja/Unity/Hub/Editor/6000.0.62f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets/Script/Player/Health.cs" />
+    <Compile Include="Assets/Script/Enemy/EnemyHealth.cs" />
+    <Compile Include="Assets/Script/Enemy/EnemyAttack.cs" />
+    <Compile Include="Assets/Script/Player/PlayerAttack.cs" />
     <Compile Include="Assets/Script/Game/GameManager.cs" />
     <Compile Include="Assets/Script/Player/PlayerMovement.cs" />
     <Compile Include="Assets/Script/Enemy/EnemyAI.cs" />
     <Compile Include="Assets/Script/Player/FirstPersonCamera.cs" />
-    <Compile Include="Assets/Script/Enemy/Attack.cs" />
     <Compile Include="Assets/TutorialInfo/Scripts/Readme.cs" />
+    <Compile Include="Assets/Script/Player/PlayerHealth.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
