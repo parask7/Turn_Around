@@ -22,12 +22,6 @@
 - ✅ Enemy switches between patrol, chase, and attack states
 - ✅ Enemy continues chasing player until one is defeated
 
-### 🔊 Audio
-- ✅ Footstep sound while walking
-- ✅ Jump sound
-- ✅ Landing sound
-- ✅ Audio managed through a dedicated player audio script
-
 ---
 
 ## 🎯 Controls
@@ -84,7 +78,7 @@
 - Player attack animations
 - Improved enemy detection (FOV + Raycast)
 - UI for health and stamina
-- Sound polishing
+- Sound Adding
 - Level design improvements
 - WebGL build support
 
