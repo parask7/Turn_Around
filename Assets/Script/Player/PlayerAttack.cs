@@ -3,29 +3,20 @@ using UnityEngine.InputSystem;
 
 public class PlayerAttack : MonoBehaviour
 {
-    [Header("Attack Settings")]
     public int damage = 25;
     public float attackRange = 2f;
-    public float attackCooldown = 1f;
     public LayerMask enemyLayer;
-
-    private float lastAttackTime;
 
     void Update()
     {
-        if (Keyboard.current.fKey.wasPressedThisFrame)
+        if (Mouse.current.leftButton.wasPressedThisFrame)
         {
-            TryAttack();
+            PerformAttack();
         }
     }
 
-    void TryAttack()
+    void PerformAttack()
     {
-        // Cooldown check
-        if (Time.time < lastAttackTime + attackCooldown)
-            return;
-
-        // Detect enemies in range
         Collider[] hits = Physics.OverlapSphere(
             transform.position,
             attackRange,
@@ -34,24 +25,23 @@ public class PlayerAttack : MonoBehaviour
 
         if (hits.Length == 0)
         {
-            Debug.Log("No enemy in range");
+            Debug.Log("No enemies hit");
             return;
         }
 
         foreach (Collider hit in hits)
         {
-            EnemyHealth enemyHealth = hit.GetComponent<EnemyHealth>();
-            if (enemyHealth != null)
+            EnemyHealth health = hit.GetComponent<EnemyHealth>();
+            if (health != null)
             {
-                enemyHealth.TakeDamage(damage);
-                lastAttackTime = Time.time;
-                Debug.Log("Enemy Hit!");
-                break;
+                health.TakeDamage(damage);
             }
         }
+
+        Debug.Log("Enemies Hit: " + hits.Length);
     }
 
-    // Visualize attack range in Scene view
+    // Optional visual aid
     void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;

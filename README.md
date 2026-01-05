@@ -1,6 +1,6 @@
 # 🎮 TurnAround
 
-**TurnAround** is a 3D Unity game currently under development, focused on combat-based gameplay with intelligent enemy behavior.
+**TurnAround** is a 3D Unity action-combat game currently under development, focused on melee combat gameplay and enemy AI behavior.
 
 ---
 
@@ -8,49 +8,50 @@
 
 ### 🧍 Player
 - ✅ Player movement (WASD)
-- ✅ First-person camera
-- ✅ Jump system
+- ✅ **Third-person camera system**
+- ✅ Jump system (CharacterController based)
 - ✅ Player health system
-- ✅ Player attack system (melee)
-- ✅ Attack triggered using **F key**
-- ✅ Attack range & cooldown implemented
+- ✅ Player melee attack system
+- ✅ Attack affects **all enemies within range**
+- ✅ Attack triggered using **Left Mouse Button**
+- ✅ No attack cooldown (basic attack)
 
 ### 👾 Enemy AI
-- ✅ Enemy patrol system using patrol points
-- ✅ Enemy chase system when player enters detection range
+- ✅ Enemy spawning system (multiple enemies per level)
+- ✅ Enemies chase the player **from the start**
 - ✅ Enemy attack system
-- ✅ Enemy switches between patrol, chase, and attack states
-- ✅ Enemy continues chasing player until one is defeated
+- ✅ Enemy health system
+- ✅ Enemies continue chasing until defeated
 
 ---
 
 ## 🎯 Controls
 
-| Key | Action |
-|----|-------|
+| Key / Mouse | Action |
+|------------|-------|
 | **W A S D** | Move Player |
-| **Mouse** | Look Around |
+| **Mouse** | Rotate Camera |
 | **Space** | Jump |
-| **F** | Attack |
+| **Left Mouse Button** | Attack |
 
 ---
 
 ## ⚔️ Combat System
 
-- Player attacks using **F key**
-- Attacks work only within a defined range
-- Cooldown prevents continuous spam
-- Enemies have health and can be defeated
-- Enemies damage the player when in attack range
+- Player performs melee attacks using **Left Mouse Button**
+- All enemies inside attack radius take damage
+- No cooldown (normal attack)
+- Enemy attacks damage the player
+- Combat logic handled via modular scripts
 
 ---
 
 ## 🧠 Enemy Behavior
 
-- Enemies patrol between multiple patrol points
-- Enemy detects player within a defined chase range
-- Enemy chases player once detected
-- Enemy attacks player when close enough
+- Enemies spawn at predefined spawn points
+- Enemies immediately chase the player
+- Enemies attack when in range
+- Movement is position-based (refinement planned)
 
 ---
 
@@ -59,7 +60,8 @@
 - **Unity Engine**
 - **C#**
 - **Unity New Input System**
-- **Rigidbody-based logic**
+- **CharacterController (Player)**
+- **Rigidbody (Enemy)**
 
 ---
 
@@ -67,27 +69,26 @@
 
 1. Clone the repository
 2. Open the project in **Unity Hub**
-3. Make sure **Input System package** is enabled
+3. Ensure **Input System Package** is enabled
 4. Press **Play** in Unity Editor
 
 ---
 
 ## 🚧 Work in Progress / Planned Features
 
+- Fix enemy overlapping (separation & collision avoidance)
 - Enemy animations
 - Player attack animations
 - Improved enemy detection (FOV + Raycast)
-- UI for health and stamina
-- Sound Adding
+- Audio system improvements
+- UI for health display
 - Level design improvements
-- WebGL build support
+- WebGL build & itch.io upload
 
----- Enemy does **not stop chasing** until player or enemy is defeated
+---
 
 ## 👨‍💻 Developer
 
 **Paras Kukreja**  
 Indie Game Developer 🚀  
 Learning Unity, Game Design, and Game Programming
-
----

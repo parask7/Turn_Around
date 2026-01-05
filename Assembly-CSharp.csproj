@@ -54,8 +54,9 @@
     <Compile Include="Assets/Script/Game/GameManager.cs" />
     <Compile Include="Assets/Script/Player/PlayerMovement.cs" />
     <Compile Include="Assets/Script/Enemy/EnemyAI.cs" />
-    <Compile Include="Assets/Script/Player/FirstPersonCamera.cs" />
+    <Compile Include="Assets/Script/Game/EnemySpawner.cs" />
     <Compile Include="Assets/TutorialInfo/Scripts/Readme.cs" />
+    <Compile Include="Assets/Script/Player/ThirdPersonCamera.cs" />
     <Compile Include="Assets/Script/Player/PlayerHealth.cs" />
   </ItemGroup>
   <ItemGroup>

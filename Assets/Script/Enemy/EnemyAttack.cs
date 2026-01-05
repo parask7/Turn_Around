@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class EnemyAttack : MonoBehaviour
 {
-    public int damage = 20;
+    public int damage = 5;
     public float attackCooldown = 1.5f;
     public float attackRange = 2.0f;
     private float lastAttackTime;
